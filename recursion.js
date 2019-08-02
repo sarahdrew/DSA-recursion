@@ -33,3 +33,36 @@ const powerCalculator = function (base, exponent) {
     }
 
 }
+
+//REVERSE STRING
+const reverseString = function (string) {
+    //base case:
+    if (string.length === 0) {
+        return '';
+    }
+    const characterToEnd = string[0]
+    return reverseString(string.slice(1)) + characterToEnd;
+
+}
+
+//NTH TRIANGULAR NUMBER
+
+const tri = function (number) {
+    if (num <= 1) {
+        return num;
+    }
+    return num + tri(num - 1);
+}
+
+//STRING SPLITTER
+const stringSplit = function (string, splitter) {
+    const i = string.indexOf(splitter);
+
+    //base case:
+    if (i < 0) {
+        return [string];
+    }
+    //recursive case
+    return [sttring.slice(0, i), ...stringSplit(string.slice(i + 1), splitter)].join('');
+}
+console.log(stringSplit('30/30/30', '/'));
